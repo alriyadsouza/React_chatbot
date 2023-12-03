@@ -1,0 +1,247 @@
+{
+      "intents": [
+      {
+            "intent": "Greeting",
+            "text": [
+              "Hi",
+              "Hi there",
+              "Hola",
+              "Hello",
+              "Hello there",
+              "Hya",
+              "Hya there",
+              "Hey",
+              "Hey there",
+              "Greetings",
+              "Good day",
+              "Good morning",
+              "Good afternoon",
+              "Good evening",
+              "Howdy",
+              "Salutations",
+              "What's up",
+              "Yo"
+            ],
+            "responses": [
+              "Hi, What's your name?",
+              "Hello, May I know your sweet name please?",
+              "Hola, Can you please tell me your name?",
+              "Hey! What is your good name?",
+              "Greetings! Kindly enter your name?",
+              "Good day! May I have the pleasure of knowing your name?",
+              "What's up? Can you share your name with me?"
+            ],
+            "extension": {
+              "function": "",
+              "entities": false,
+              "responses": []
+            },
+            "context": {
+              "in": "",
+              "out": "PhoneRequest",
+              "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+      },               
+      {
+          "intent": "PhoneRequest",
+          "text": ["Alriya","Vyasa","Crystal"],
+          "responses": [
+            "Thank you! Now, could you please provide your phone number?",
+            "Nice to meet you, could you share your phone number with me?",
+            "Great! Next, may I have your phone number?",
+            "Awesome! To proceed, could you share your contact number?",
+            "Thanks for that! Can you provide your phone number?",
+            "Sure thing! Before we continue, could you share your phone number?",
+            "Fantastic! To move forward, I'll need your phone number.",
+            "Excellent! May I have your phone number, please?",
+            "Thanks! Next step, could you provide your phone number?",
+            "Certainly! To proceed, please share your phone number with me."
+          ],
+          "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+          },
+          "context": {
+            "in": "PhoneRequest", 
+            "out": "EmailRequest",
+            "clear": false 
+          },
+          "entityType": "NA",
+          "entities": []
+        },
+        {
+            "intent": "EmailRequest",
+            "text": ["8660527370","6459747638"],
+            "responses": [
+              "Thanks for providing your number. Could you please share your email address for confirmation?",
+              "Great! To proceed, may I have your email address?",
+              "Perfect! Next step is confirming your appointment. Can you provide your email address?",
+              "Awesome! We're almost done. Could you share your email with us for appointment confirmation?",
+              "Excellent! Before we finalize everything, could you provide your email address?",
+              "Sure thing! For confirmation, could you please provide your email?",
+              "Thank you for sharing your number. To proceed, may I know your email address?",
+              "Thanks! Let's move forward. Can you share your email address for appointment confirmation?"
+            ],
+            "extension": {
+              "function": "",
+              "entities": false,
+              "responses": []
+            },
+            "context": {
+              "in": "EmailRequest",
+              "out": "Proceed",
+              "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },          
+        {
+            "intent": "Proceed",
+            "text": ["alriyatreeza929@gmail.com","vyasa@gmail.com","crystal@gmail.com"],
+            "responses": [
+              "Thank you! Now, let's proceed with the dental booking.",
+              "Great! Let's move on to book your dental appointment.",
+              "Perfect! Shall we continue with scheduling your dental visit?",
+              "Excellent! We're ready to move forward with your dental booking.",
+              "Awesome! Now that we have your email, let's proceed with the dental appointment.",
+              "Fantastic! Your email is noted. Let's continue with scheduling your dental visit.",
+              "Got it! Now, let's proceed with setting up your dental appointment.",
+              "Thanks! We're all set with your email. Shall we move on to the next step?"
+            ],
+            "extension": {
+              "function": "",
+              "entities": false,
+              "responses": []
+            },
+            "context": {
+              "in": "Proceed",
+              "out": "TreatmentType", 
+              "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+          },    
+          {
+            "intent": "TreatmentType",
+            "text": ["Yes","Okayy","Okay","Indeed","Yeah","Yea"],
+            "responses": [
+              "Great! Now, could you specify the type of treatment you are interested in?",
+              "Excellent! Let's proceed. What specific dental treatment are you looking for?",
+              "Fantastic! Before we finalize, could you provide more details about the type of treatment you need?",
+              "Awesome! Now, let's talk about the specific treatment you're interested in. What type is it?",
+              "Perfect! Your interest in treatment is noted. Can you share more details about the type of treatment you're seeking?",
+              "Got it! Now, let's discuss the specific treatment you have in mind. What type of dental treatment are you thinking of?",
+              "Wonderful choice! Let's move on to the next step. Could you specify the type of treatment you would like?",
+              "Fantastic decision! Now, about the treatment type. What specific dental service are you looking to schedule?"
+            ],
+            "extension": {
+              "function": "",
+              "entities": true,
+              "responses": []
+            },
+            "context": {
+              "in": "TreatmentType",
+              "out": "TimeSlotProvided",
+              "clear": false
+            },
+            "entityType": "treatmentOptions",
+            "entities": [
+              "Routine checkups and cleanings",
+              "Dental fillings",
+              "Tooth extractions",
+              "Dental X-rays",
+              "Fluoride treatments",
+              "Braces (metal, ceramic, or invisible aligners)",
+              "Retainers",
+              "Bite correction",
+              "Treatment of gum disease (gingivitis and periodontitis)",
+              "Periodontal surgery",
+              "Dental implant placement",
+              "Root canal therapy",
+              "Treatment of dental pulp and nerve issues",
+              "Apicoectomy (root-end surgery)",
+              "Tooth extractions, including wisdom teeth",
+              "Jaw surgery (orthognathic surgery)",
+              "Facial trauma surgery",
+              "Dental implant surgery",
+              "Cleft lip and palate repair",
+              "Crowns and bridges",
+              "Dentures (complete or partial)",
+              "Dental implants and implant-supported restorations",
+              "Cosmetic dentistry (veneers, teeth whitening)",
+              "Pediatric dental checkups",
+              "Preventive treatments (fluoride, sealants)",
+              "Treatment of cavities",
+              "Orthodontic evaluations",
+              "Behavioral guidance for oral care",
+              "Diagnosis of oral diseases, including oral cancers",
+              "Biopsy procedures",
+              "Management of oral lesions and conditions",
+              "Diagnosis and management of oral mucosal disorders",
+              "Treatment of oral manifestations of systemic diseases",
+              "Temporomandibular joint (TMJ) disorder management",
+              "Administration of anesthesia for dental procedures",
+              "Sedation dentistry to manage anxiety",
+              "Pain management during oral surgery"
+            ]
+          },                         
+          {
+            "intent": "TimeSlotProvided",
+            "text": [
+            ],
+            "responses": [
+                  "Great! Now, could you specify the preferred time slot?",
+                  "Excellent! Let's proceed. When would you like to schedule your treatment?",
+                  "Fantastic! Before we finalize, could you provide your preferred time for the appointment?",
+                  "Awesome! Now, let's talk about the time slot. What works best for you?",
+                  "Perfect! Your preferred treatment is noted. Now, when would you prefer to have it?",
+                  "Got it! Now, let's discuss the time for your treatment. What time suits you best?",
+                  "Wonderful choice! Let's move on to the next step. What time are you thinking for your treatment?",
+                  "Fantastic decision! Now, about the timing. When are you available for your treatment?"
+                ],
+            "extension": {
+              "function": "",
+              "entities": false,
+              "responses": []
+            },
+            "context": {
+              "in": "TimeSlotProvided",
+              "out": "TimeSlotRequest",
+              "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+          },
+          {
+            "intent": "TimeSlotRequest",
+            "text": [
+            ],
+            "responses": [
+                  "Thank you! Your dental appointment is confirmed. Is there anything else I can help you with?",
+                  "Great! Your appointment is scheduled. Do you have any other questions or requests?",
+                  "Perfect! We've booked your dental visit. Anything else you'd like to discuss?",
+                  "Awesome! Your time slot is confirmed. If you have any more questions, feel free to ask!",
+                  "Fantastic! Your appointment is set. Let me know if there's anything else you need assistance with.",
+                  "Wonderful! Your dental visit is scheduled. Need help with anything else?",
+                  "Excellent! Your time slot is locked in. If you have additional requests, feel free to share!",
+                  "Fantastic news! Your appointment is finalized. Is there anything specific you'd like to know or discuss?"
+            ],
+            "extension": {
+              "function": "",
+              "entities": false,
+              "responses": []
+            },
+            "context": {
+              "in": "TimeSlotRequest",
+              "out": "",
+              "clear": true
+            },
+            "entityType": "NA",
+            "entities": []
+          }
+        ]
+    }
+    
